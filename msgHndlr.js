@@ -479,12 +479,12 @@ module.exports = msgHandler = async (client, message) => {
             if (!isGroupMsg) return client.reply(from, 'Perintah ini hanya bisa di gunakan dalam group!', id)
             if (!isGroupAdmins) return client.reply(from, 'Perintah ini hanya bisa di gunakan oleh admin group', id)
             const groupMem = await client.getGroupMembers(groupId)
-            let hehe = '╔══✪〘 Mention All 〙✪══\n'
+            let hehe = '▶▷「 *DI PANGGIL OM* 」◀◁\n'
             for (let i = 0; i < groupMem.length; i++) {
-                hehe += '╠➥'
+                hehe += '⫮⇨'
                 hehe += ` @${groupMem[i].id.replace(/@c.us/g, '')}\n`
             }
-            hehe += '╚═〘 Shinomiya Kaguya BOT 〙'
+            hehe += '↳▸ ABIYU BOT ◂'
             await client.sendTextWithMentions(from, hehe)
             break
         case '!kickall':
